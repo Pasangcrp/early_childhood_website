@@ -1,0 +1,2078 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #264653;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f4a261;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px;
+}
+
+.navbar nav ul li a:hover {
+    color: #e9c46a;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures the dropdown is directly below the parent */
+    left: 0;
+    background-color: #1d3557;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 0; /* Removes any gap between the button and the menu */
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #457b9d;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('https://th.bing.com/th/id/R.0e1a5af16b79e4fa589390daeb820a17?rik=2cEj9xEGiGbH5A&riu=http%3a%2f%2fprescolaireus.com%2fsysimg%2fencourage-creativity-in-your-child.jpg&ehk=le8%2fPBjEMryV3sN2AoOhdj5XmDliC8MInXRdHNdPBVg%3d&risl=&pid=ImgRaw&r=0') no-repeat center center / cover; 
+    color: white; /* Adjust text color for contrast */
+    border-radius: 0; /* Remove rounded corners to make it full width */
+    margin: 0; /* Remove margin to make it full width */
+    width: 100%; /* Ensure full width */
+    box-shadow: none; /* Remove shadow */
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+/* Full Width Sections */
+.full-width {
+    width: 100%;
+    padding: 60px 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Introduction Section */
+.introduction {
+    background-color: #436876; /* Matches the hero section background */
+    color: white; /* For consistency with the hero section text */
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding for better alignment */
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 0; /* Remove rounded corners for a clean look */
+}
+
+.introduction h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase; /* Matches the style of the hero text */
+    color: #f4a261; /* Accent color to align with the theme */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+}
+
+.introduction p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 10px auto;
+    color: #e9c46a; /* Slightly lighter color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add subtle shadow for readability */
+}
+
+
+/* Key Points Section */
+.key-points {
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key-points h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fefae0;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.key-points ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.key-points ul li {
+    background: rgba(255, 255, 255, 0.9);
+    color: #264653;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.key-points ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured Curriculum Areas Section */
+.featured-content {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.featured-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #264653;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.curriculum-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Ensures no underline for the link */
+}
+
+.curriculum-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Enhanced overlay for text visibility */
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.curriculum-card h3,
+.curriculum-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none; /* Removes underline from text */
+}
+
+.curriculum-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.curriculum-card p {
+    font-size: 1.1em;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.curriculum-card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.curriculum-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.2); /* Reduce overlay darkness on hover */
+}
+
+
+/* Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Start with an offset */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Return to the original position */
+}
+
+/* Arts Section */
+#art-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('./assets/arts.png') no-repeat center / cover;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#art-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#art-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#art-hero p {
+    font-size: 1.4em;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+/* Introduction Section */
+#art-introduction {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.art-intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.art-intro-text {
+    max-width: 500px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #264653;
+}
+
+.art-intro-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Creativity Theories and Perspectives Section */
+#creativity-theories {
+    background-color: #e9c46a;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#creativity-theories h2 {
+    font-size: 2.2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#creativity-theories p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Resources, Materials, and Digital Technologies Section */
+#art-resources {
+    background-color: #f1faee;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#art-resources h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#art-resources p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #264653;
+    text-align: justify;
+}
+
+/* Benefits Section */
+#art-benefits {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#art-benefits h2 {
+    font-size: 2.2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.benefit-card {
+    background-color: #f4a261;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    font-size: 1.1em;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Learning Experiences for Different Age Groups Section */
+#art-experiences {
+    background-color: #f1f1f1;
+    padding: 50px 20px;
+    border-radius: 8px;
+}
+
+#art-experiences h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#art-experiences ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#art-experiences li {
+    padding: 10px;
+    border-left: 4px solid #264653;
+    margin-bottom: 15px;
+}
+
+#art-experiences li strong {
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Original Creative Learning Opportunities Section */
+#original-creative {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-radius: 8px;
+}
+
+#original-creative h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#original-creative ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#original-creative li {
+    padding: 10px;
+    border-left: 4px solid #f4a261;
+    margin-bottom: 15px;
+}
+
+#original-creative li strong {
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Critical Reflection Section */
+#reflection {
+    background-color: #264653;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reflection h2 {
+    font-size: 2.2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#reflection p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Featured Art Activities Section */
+#art-activities {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-top: 30px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.activity-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 280px;
+}
+
+.activity-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.activity-card p {
+    font-size: 1.2em;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #art-hero {
+        padding: 60px 20px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    #creativity-theories p,
+    #art-resources p {
+        font-size: 1.1em;
+    }
+
+    #art-experiences ul,
+    #original-creative ul {
+        padding-left: 20px;
+    }
+}
+
+/* Drama and Puppetry Page */
+#drama-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('https://th.bing.com/th/id/R.1cd8bedf9a6fc1615abe15bbe29ae6e7?rik=YRKwnMWTJA1VSQ&pid=ImgRaw&r=0') no-repeat center center / cover;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#drama-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#drama-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#drama-hero p {
+    font-size: 1.4em;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+/* Introduction Section */
+#drama-introduction {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.drama-intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+}
+
+.drama-intro-text {
+    max-width: 500px;  /* Text box width */
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #264653;
+}
+
+.drama-intro-image img {
+    max-width: 100%;
+    height: auto; /* Keep aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;  /* Make the image take up remaining space */
+}
+
+/* Creativity Theories Section */
+#creativity-theories {
+    background-color: #e9c46a;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#creativity-theories h2 {
+    font-size: 2.2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#creativity-theories p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Resources Section */
+#drama-resources {
+    background-color: #f1faee;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#drama-resources h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#drama-resources p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #264653;
+    text-align: justify;
+}
+
+/* Learning Experiences Section */
+#drama-experiences {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#drama-experiences h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#drama-experiences ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#drama-experiences li {
+    padding: 10px;
+    border-left: 4px solid #264653;
+    margin-bottom: 15px;
+}
+
+#drama-experiences li strong {
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Original Learning Opportunities Section */
+#original-creative {
+    background-color: #daf4ff;
+    padding: 50px 20px;
+    border-radius: 8px;
+}
+
+#original-creative h2 {
+    font-size: 2.2em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#original-creative ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#original-creative li {
+    padding: 10px;
+    border-left: 4px solid #f4a261;
+    margin-bottom: 15px;
+}
+
+#original-creative li strong {
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Critical Reflection Section */
+#reflection {
+    background-color: #fffafa;
+    color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reflection h2 {
+    font-size: 2.2em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#reflection p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #drama-hero {
+        padding: 60px 20px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    #creativity-theories p,
+    #drama-resources p {
+        font-size: 1.1em;
+    }
+
+    #drama-experiences ul,
+    #original-creative ul {
+        padding-left: 20px;
+    }
+}
+
+/* Movement and Music Page */
+
+#movement-music-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://i2.wp.com/musication.nyc/wp-content/uploads/2019/05/MUSICATION347.jpg?fit=800%2C533&ssl=1') no-repeat center center / cover;
+    color: white;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#movement-music-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#movement-music-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#movement-music-hero p {
+    font-size: 1.5em;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+/* Introduction Section */
+#movement-music-introduction {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.movement-music-intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movement-music-intro-text {
+    max-width: 550px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #264653;
+}
+
+.movement-music-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Box Styles */
+.content-box {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.content-box h2 {
+    font-size: 2.5em;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.content-box p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.content-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-box li {
+    font-size: 1.1em;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.content-box li strong {
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Reflection Section */
+#movement-music-reflection {
+    background-color: #264653;
+    color: rgb(28, 27, 27);
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#movement-music-reflection h2 {
+    font-size: 2.5em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#movement-music-reflection p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #movement-music-hero {
+        padding: 60px 20px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Language and Literacy Page */
+#language-literacy-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Hero Section */
+#language-literacy-hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: url('https://th.bing.com/th/id/R.77c8715b25664af2459c8f60fc9d318f?rik=9uNozhjjI3OGUQ&riu=http%3a%2f%2fcreativelearningnj.com%2fwp-content%2fuploads%2f2020%2f01%2fthe-importance-of-creativity-in-preschool-education.jpg&ehk=SB2dprCl617hD4LTBQezfbF35woeNTYrH2pcsSXkL60%3d&risl=&pid=ImgRaw&r=0') no-repeat center center / cover;
+    color: white;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+#language-literacy-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#language-literacy-hero h1 {
+    font-size: 3.8em;
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+#language-literacy-hero p {
+    font-size: 1.6em;
+    z-index: 2;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* Section Styling */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Introduction Section */
+#language-literacy-introduction {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: box-shadow 0.3s ease;
+}
+
+#language-literacy-introduction:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.movement-music-intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movement-music-intro-text {
+    max-width: 550px;
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #264653;
+    text-align: justify;
+}
+
+.movement-music-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.movement-music-intro-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Creativity Theories Section */
+#language-literacy-creativity-theories {
+    padding: 50px 20px;
+    background-color: #e9c46a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#language-literacy-creativity-theories h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#language-literacy-creativity-theories p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Resources Section */
+#language-literacy-resources {
+    padding: 50px 20px;
+    background-color: #f1faee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#language-literacy-resources h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#language-literacy-resources p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+    color: #264653;
+}
+
+/* Learning Experiences Section */
+#language-literacy-experiences {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#language-literacy-experiences h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#language-literacy-experiences ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#language-literacy-experiences li {
+    font-size: 1.2em;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    color: #264653;
+}
+
+#language-literacy-experiences li strong {
+    font-weight: bold;
+    color: #f4a261;
+}
+
+/* Original Creative Learning Opportunities Section */
+#language-literacy-original-creative {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#language-literacy-original-creative h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#language-literacy-original-creative ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#language-literacy-original-creative li {
+    font-size: 1.2em;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    background-color: #e9c46a;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#language-literacy-original-creative li:hover {
+    transform: translateY(-5px);
+    background-color: #f4a261;
+}
+
+/* Critical Reflection Section */
+#language-literacy-reflection {
+    padding: 60px 20px;
+    background-color: #264653;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#language-literacy-reflection h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#language-literacy-reflection p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .movement-music-intro-container {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+}
+
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+/* Science Section */
+#science-page {
+    padding: 20px;
+}
+
+/* Hero Section */
+#science-hero {
+    background: url('https://th.bing.com/th/id/R.77c8715b25664af2459c8f60fc9d318f?rik=9uNozhjjI3OGUQ&riu=http%3a%2f%2fcreativelearningnj.com%2fwp-content%2fuploads%2f2020%2f01%2fthe-importance-of-creativity-in-preschool-education.jpg&ehk=SB2dprCl617hD4LTBQezfbF35woeNTYrH2pcsSXkL60%3d&risl=&pid=ImgRaw&r=0') no-repeat center center/cover;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#science-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.section-container h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.learning-experiences li, .creative-learning-opportunities li {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.learning-experiences li::before, .creative-learning-opportunities li::before {
+    content: '•';
+    color: #2980b9;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Image Styling */
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.science-image-container {
+    max-width: 35%;
+}
+
+.science-image-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .science-image-container {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+/* Main Section Styling */
+#engineering-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+#engineering-introduction {
+    background: url('https://www.sheknows.com/wp-content/uploads/2018/12/tp9fsi5t1vvjlj920eas.jpeg?w=1024') no-repeat center center / cover;
+    color: white;
+    padding: 100px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#engineering-introduction .engineering-section-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+#engineering-introduction h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#engineering-introduction p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Section Styling for Content */
+.engineering-section-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#engineering-creativity-theories h3,
+#engineering-resources h3,
+#engineering-learning-experiences h3,
+#engineering-original-creative h3,
+#engineering-reflection h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #264653;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#engineering-creativity-theories p,
+#engineering-resources p,
+#engineering-learning-experiences ul,
+#engineering-original-creative ul,
+#engineering-reflection p {
+    font-size: 1.2em;
+    color: #264653;
+    line-height: 1.6;
+}
+
+/* Learning Experiences Section Styling */
+#engineering-learning-experiences ul {
+    list-style: none;
+    padding: 0;
+}
+
+#engineering-learning-experiences li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#engineering-learning-experiences li strong {
+    color: #264653;
+}
+
+/* Original Creative Learning Opportunities Section */
+#engineering-original-creative ul {
+    list-style: none;
+    padding: 0;
+}
+
+#engineering-original-creative li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#engineering-original-creative li strong {
+    color: #264653;
+}
+
+/* Critical Reflection Section */
+#engineering-reflection {
+    background-color: #264653;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#engineering-reflection p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #engineering-introduction {
+        padding: 80px 20px;
+    }
+
+    .engineering-section-container {
+        padding: 20px;
+    }
+
+    #engineering-introduction h2 {
+        font-size: 2em;
+    }
+
+    #engineering-introduction p {
+        font-size: 1.2em;
+    }
+
+    #engineering-creativity-theories h3,
+    #engineering-resources h3,
+    #engineering-learning-experiences h3,
+    #engineering-original-creative h3,
+    #engineering-reflection h3 {
+        font-size: 1.8em;
+    }
+
+    #engineering-creativity-theories p,
+    #engineering-resources p,
+    #engineering-learning-experiences ul,
+    #engineering-original-creative ul,
+    #engineering-reflection p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Technology Page Layout */
+#technology-page {
+    padding: 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  .content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .text-content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+  
+  .image-content img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #technology-page h2,
+  #technology-page h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Learning Experience Cards */
+  .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h4 {
+    font-size: 1.5rem;
+    color: #2980b9;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .text-content h2 {
+      font-size: 2rem;
+    }
+  
+    .experience-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .content-section {
+      padding: 1rem;
+    }
+  
+    #technology-page h2,
+    #technology-page h3 {
+      font-size: 1.6rem;
+    }
+  
+    #technology-page p {
+      font-size: 1rem;
+    }
+  }
+  
+
+ /* Mathematics and Numeracy Page */
+#mathematics-numeracy-page {
+    padding: 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Flex Layout for Introduction Section */
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .text-content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+  
+  .image-content img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Section Titles */
+  #mathematics-numeracy-page h2,
+  #mathematics-numeracy-page h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Learning Experience Cards */
+  .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h4 {
+    font-size: 1.5rem;
+    color: #2980b9;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .text-content h2 {
+      font-size: 2rem;
+    }
+  
+    .experience-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .content-section {
+      padding: 1rem;
+    }
+  
+    #mathematics-numeracy-page h2,
+    #mathematics-numeracy-page h3 {
+      font-size: 1.6rem;
+    }
+  
+    #mathematics-numeracy-page p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Humanities and Social Sciences Page */
+#humanities-page {
+    padding: 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  /* Content Sections */
+  .humanities-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Flex Layout for Introduction Section */
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .text-content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+  
+  .image-content img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Section Titles */
+  #humanities-page h2,
+  #humanities-page h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Learning Experience Cards */
+  .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h4 {
+    font-size: 1.5rem;
+    color: #2980b9;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .intro-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .text-content h2 {
+      font-size: 2rem;
+    }
+  
+    .experience-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .humanities-section {
+      padding: 1rem;
+    }
+  
+    #humanities-page h2,
+    #humanities-page h3 {
+      font-size: 1.6rem;
+    }
+  
+    #humanities-page p {
+      font-size: 1rem;
+    }
+  }
+
+  
+  /* integrated-curriculum*/
+  #integrated-curriculum-page h2,
+  #integrated-curriculum-page h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  #integrated-curriculum-page h3 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* Cards for Learning Experiences and Creative Opportunities */
+  .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h4 {
+    font-size: 1.6rem;
+    color: #2980b9;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Learning Experiences Card Titles */
+  .card h4 {
+    color: #2980b9;
+    font-weight: bold;
+  }
+  
+  /* Section Background Color */
+  #integrated-curriculum-creativity-theories {
+    background-color: #ecf0f1;
+    padding: 3rem 0;
+    border-radius: 10px;
+  }
+  
+  /* Resources Section */
+  #integrated-curriculum-resources {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Floating Background for Resource Sections */
+  #integrated-curriculum-reflection {
+    background: #cbe0ed;
+    color: rgb(5, 5, 5);
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #integrated-curriculum-reflection p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      padding: 1.5rem;
+    }
+  
+    #integrated-curriculum-reflection {
+      padding: 3rem 1.5rem;
+    }
+  
+    #integrated-curriculum-page {
+      padding: 3rem 1.5rem;
+    }
+  
+    .experience-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* Footer Section */
+.footer {
+    background-color: #1b3b4f; 
+    color: white;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f4a261; 
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #e9c46a;
+}
+
+.footer-column form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-column form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.footer-column form button {
+    padding: 10px 15px;
+    background-color: #ec8b3d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-column form button:hover {
+    background-color: #c66c55;
+}
+
+/* Footer Bar */
+.footer-bar {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    font-size: 0.8em;
+}
+
+
+
+#references-page {
+    padding: 20px;
+  }
+
+  #references-introduction {
+    margin-bottom: 20px;
+  }
+
+  #references-list {
+    margin-top: 20px;
+  }
+
+  .reference-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
